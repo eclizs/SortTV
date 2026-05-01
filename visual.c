@@ -8,10 +8,13 @@
 
 #define VISUALIZE(arr,size, intervalInSeconds) \
     do { \
-        system("clear"); \
-        visualizeArray(arr, size); \
-        printf("\n"); \
-        usleep(intervalInSeconds * 1000000); \
+        if(intervalInSeconds > 0) \
+        { \
+            system("clear"); \
+            visualizeArray(arr, size); \
+            printf("\n"); \
+            usleep(intervalInSeconds * 1000000); \
+        } \
     } while(0)
 
 typedef struct SortingFunction {
@@ -190,13 +193,6 @@ void insertionSort(int *array, int size, int intervalInSeconds)
         array[j + 1] = key;
         VISUALIZE(array, size, intervalInSeconds);
     }
-}
-
-void printMsg(char *sortingAlgorithm, int *array, int size)
-{
-    printf("%s Visualization:\n", sortingAlgorithm); getchar();
-    VISUALIZE(array, size, 0.01);
-    getchar();
 }
 
 void randomizeArray(int *array, int arraysize, int max)
