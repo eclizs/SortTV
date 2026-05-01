@@ -129,6 +129,7 @@ void selectionSort(int *array, int size, int intervalInSeconds)
             {
                 minIndex = j;
             }
+            VISUALIZE(array, size, intervalInSeconds);
         }
         swap(&array[i], &array[minIndex]);
         VISUALIZE(array, size, intervalInSeconds);
