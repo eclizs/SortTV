@@ -5,7 +5,7 @@
 #include "swap.h"
 #include "visualize.h"
 
-void bubbleSort(int *array, int size, int intervalInSeconds)
+void bubbleSort(int *array, int size, double intervalInSeconds)
 {
     for (int i = 0; i < size - 1; i++)
     {

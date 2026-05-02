@@ -1,6 +1,6 @@
 #ifndef SELECTIONSORT_H
 #define SELECTIONSORT_H
 
-void selectionSort(int *array, int size, int intervalInSeconds);
+void selectionSort(int *array, int size, double intervalInSeconds);
 
 #endif // SELECTIONSORT_H

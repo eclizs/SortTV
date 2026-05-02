@@ -4,7 +4,7 @@
 #include "mergeSort.h"
 #include "visualize.h"
 
-static void mergeSort_rec(int *array, int left, int right, int size, int intervalInSeconds)
+static void mergeSort_rec(int *array, int left, int right, int size, double intervalInSeconds)
 {
     if (left < right)
     {
@@ -50,7 +50,7 @@ static void mergeSort_rec(int *array, int left, int right, int size, int interva
     }
 }
 
-void mergeSort(int *array, int size, int intervalInSeconds)
+void mergeSort(int *array, int size, double intervalInSeconds)
 {
     mergeSort_rec(array, 0, size - 1, size, intervalInSeconds);
 }

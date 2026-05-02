@@ -11,7 +11,7 @@
 #include "quickSort.h"
 
 typedef struct SortingFunction {
-    void (*function)(int *, int, int);
+    void (*function)(int *, int, double);
     const char *name;
 } SortingFunction;
 
@@ -23,7 +23,7 @@ void randomizeArray(int *array, int arraysize, int max)
     }
 }
 
-void visualizeAlgorithm(SortingFunction sf, int *array, int size, int max, int intervalInSeconds)
+void visualizeAlgorithm(SortingFunction sf, int *array, int size, int max, double intervalInSeconds)
 {
     randomizeArray(array, size, max);
     system("clear");
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     int numSortingFunctions = sizeof(sortingFunctions) / sizeof(sortingFunctions[0]);
     for (int i = 0; i < numSortingFunctions; i++)
     {
-        visualizeAlgorithm(sortingFunctions[i], arr, arraysize, w.ws_row - 2, 0.5);
+        visualizeAlgorithm(sortingFunctions[i], arr, arraysize, w.ws_row - 2, 0.01);
     }
 
     return 0;

@@ -4,7 +4,7 @@
 #include "insertionSort.h"
 #include "visualize.h"
 
-void insertionSort(int *array, int size, int intervalInSeconds)
+void insertionSort(int *array, int size, double intervalInSeconds)
 {
     for (int i = 1; i < size; i++)
     {

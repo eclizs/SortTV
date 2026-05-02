@@ -5,7 +5,7 @@
 #include "swap.h"
 #include "visualize.h"
 
-static int partition(int *array, int low, int high, int size, int intervalInSeconds)
+static int partition(int *array, int low, int high, int size, double intervalInSeconds)
 {
     int pivot = array[high];
     int i = low - 1;
@@ -24,7 +24,7 @@ static int partition(int *array, int low, int high, int size, int intervalInSeco
     return i + 1;
 }
 
-static void quickSort_rec(int *array, int low, int high, int size, int intervalInSeconds)
+static void quickSort_rec(int *array, int low, int high, int size, double intervalInSeconds)
 {
     if (low < high)
     {
@@ -34,7 +34,7 @@ static void quickSort_rec(int *array, int low, int high, int size, int intervalI
     }
 }
 
-void quickSort(int *array, int size, int intervalInSeconds)
+void quickSort(int *array, int size, double intervalInSeconds)
 {
     quickSort_rec(array, 0, size - 1, size, intervalInSeconds);
 }
