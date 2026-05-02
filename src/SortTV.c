@@ -239,5 +239,6 @@ int main(int argc, char *argv[])
         visualizeAlgorithm(sortingFunctions[i], arr, arraySize, intervalInSeconds);
     }
 
+    free(arr);
     return 0;
 }
