@@ -171,8 +171,17 @@ int main(int argc, char *argv[])
 
     if(benchmark)
     {
-        width = benchmarkSize;
-        height = benchmarkSize;
+        if(benchmarkSize > 0)
+        {
+            width = benchmarkSize;
+            height = benchmarkSize;
+        }
+        else
+        {
+            fprintf(stderr, "Invalid benchmark size specified. Using default of 10000.\n");
+            width = 10000;
+            height = 10000;
+        }
     }
 
     int arraySize = width;
