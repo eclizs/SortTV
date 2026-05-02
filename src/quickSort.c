@@ -21,6 +21,7 @@ static int partition(int *array, int low, int high, int size, double intervalInS
     }
 
     swap(&array[i + 1], &array[high]);
+    VISUALIZE(array, size, intervalInSeconds);
     return i + 1;
 }
 
