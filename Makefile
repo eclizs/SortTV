@@ -10,7 +10,7 @@ SRCS = $(wildcard $(SRC_DIR)/*.c)
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 DEPS = $(OBJS:.o=.d)
 
-TARGET = $(BIN_DIR)/main
+TARGET = $(BIN_DIR)/SortTV
 
 # ── Default target ────────────────────────────────────────────────
 all: $(TARGET)

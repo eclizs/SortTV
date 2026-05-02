@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 #include<unistd.h>
 #include<time.h>
 #include<sys/ioctl.h>
@@ -34,6 +35,13 @@ void visualizeAlgorithm(SortingFunction sf, int *array, int size, int max, doubl
 
 int main(int argc, char *argv[])
 {
+    if(argc > 1 && strcmp(argv[1], "--help") == 0)
+    {
+        printf("Usage: %s [intervalInSeconds]\n", argv[0]);
+        printf("Example: %s 0.01\n", argv[0]);
+        return 0;
+    }
+    double intervalInSeconds = argc > 1 ? atof(argv[1]) : 0.01;
     struct winsize w;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
     int arraysize = w.ws_col / 2 - 1;
@@ -52,7 +60,7 @@ int main(int argc, char *argv[])
     int numSortingFunctions = sizeof(sortingFunctions) / sizeof(sortingFunctions[0]);
     for (int i = 0; i < numSortingFunctions; i++)
     {
-        visualizeAlgorithm(sortingFunctions[i], arr, arraysize, w.ws_row - 2, 0.01);
+        visualizeAlgorithm(sortingFunctions[i], arr, arraysize, w.ws_row - 2, intervalInSeconds);
     }
 
     return 0;
