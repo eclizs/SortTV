@@ -32,3 +32,5 @@ $(BIN_DIR) $(OBJ_DIR):
 
 # ── Clean ─────────────────────────────────────────────────────────
 .PHONY: all clean
+clean:
+		rm -rf $(OBJ_DIR) $(BIN_DIR)

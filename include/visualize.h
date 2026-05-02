@@ -3,7 +3,7 @@
 
 #define VISUALIZE(arr,size, intervalInSeconds) \
     do { \
-            system("clear"); \
+            write(STDOUT_FILENO, "\033[H", 3); /* Move cursor to the top-left corner */ \
             visualizeArray(arr, size); \
             printf("\n"); \
             usleep(intervalInSeconds * 1000000); \
