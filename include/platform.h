@@ -13,6 +13,7 @@
 #else
 #include<unistd.h>
 #include<sys/ioctl.h>
+#include<time.h>
 #define CLEAR_SCREEN() system("clear")
 #define WRITE(fd, buf, count) write(fd, buf, count)
 #define SLEEP_S(seconds) usleep((seconds) * 1000000)
@@ -23,5 +24,6 @@ typedef struct {
 } WindowSize;
 
 WindowSize getConsoleInfo();
+double measureElapsedTime(void (*sortingFunction)(int *, int, double), int *array, int size);
 
 #endif // PLATFORM_H
