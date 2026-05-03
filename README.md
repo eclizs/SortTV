@@ -5,14 +5,17 @@ This is an experimental project I made because I had a dumb idea of how to visua
 
 Currently bubble sort, insertion sort, selection sort, merge sort, and quick sort are supported. If anyone finds this and wants to add another sorting algorithm it should be easy. The only thing to know is where to put the VISUALIZE function.
 
-TODO:
+## Installation
 
-flags to add:
-- [x] --sort=[sortingAlgorithm name]
-- [x] --help/-h
-- [x] --benchmark
-- [x] --width=N
-- [x] --height=N
-- [x] --interval/-i
+### Linux
 
-done for now(?)
+```
+git clone https://github.com/eclizs/SortTV.git
+cd SortTV
+make
+./bin/SortTV
+```
+
+
+
+
