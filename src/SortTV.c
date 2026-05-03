@@ -160,8 +160,7 @@ int main(int argc, char *argv[])
 
     if(sortName != NULL) sortName[0] = toupper(sortName[0]); // Capitalize first letter for display
 
-    struct winsize w;
-    ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+    WindowSize w = getConsoleInfo();
 
     if((width < 0 || width > w.ws_col - 2 ||
         height < 0 || height > w.ws_row - STATUS_LINES)
